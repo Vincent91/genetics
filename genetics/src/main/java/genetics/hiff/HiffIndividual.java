@@ -36,7 +36,10 @@ public class HiffIndividual {
     }
 
     public HiffIndividual(HiffIndividual i){
-        Collections.copy(block, i.getBlock());
+        block = new ArrayList<Integer>();
+        for (int k = 0; k < i.getSize(); ++k){
+            block.add(i.getBlock().get(k));
+        }
     }
 
     public int getSize(){
@@ -68,6 +71,10 @@ public class HiffIndividual {
             }
         }
         return ((right - left) + 1 + temp);
+    }
+    
+    public void inverse(int i){
+        block.set(i, 1 - block.get(i));
     }
 
     public String toString(){
