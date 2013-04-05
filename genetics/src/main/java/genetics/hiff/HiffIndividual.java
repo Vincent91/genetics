@@ -77,6 +77,10 @@ public class HiffIndividual {
         block.set(i, 1 - block.get(i));
     }
 
+    public void set(int i, int a){
+        block.set(i, a);
+    }
+
     public String toString(){
         return (block.toString());
     }
