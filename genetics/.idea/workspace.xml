@@ -105,9 +105,11 @@
       <file leaf-file-name="HiffRL.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffRL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="66" selection-start="735" selection-end="735" vertical-scroll-proportion="0.49920762">
+            <state line="44" column="33" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.85736924">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#819#838#0" expanded="true" />
+                <element signature="e#896#915#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -669,9 +671,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffRL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="66" selection-start="735" selection-end="735" vertical-scroll-proportion="0.49920762">
+        <state line="44" column="33" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.85736924">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#819#838#0" expanded="true" />
+            <element signature="e#896#915#0" expanded="true" />
           </folding>
         </state>
       </provider>
