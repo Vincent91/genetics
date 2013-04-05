@@ -5,7 +5,7 @@ import org.uncommons.maths.random.MersenneTwisterRNG;
 /**
  * @author Vladislav Kononov vincent@yandex-team.ru
  */
-public class CrossoverOperator {
+public class CrossoverOperator implements Operator{
     private Population population;
     private MersenneTwisterRNG rng;
     private double reward;

@@ -5,7 +5,7 @@ import org.uncommons.maths.random.MersenneTwisterRNG;
 /**
  * @author Vladislav Kononov vincent@yandex-team.ru
  */
-public class MutationOperator {
+public class MutationOperator implements Operator{
 
     private static final double PROBABILITY = 0.1;
 
