@@ -61,7 +61,8 @@ public class MutationOperator implements Operator{
                     }
                 }
                 population.setIndividual(possition, mutant);
-                reward = (mutant.fitness() - f) / f;
+//                reward = (mutant.fitness() - f) / f;
+                reward = mutant.fitness() - f;
                 break;
             } else {
                 left = right;

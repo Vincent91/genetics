@@ -100,6 +100,7 @@ public class CrossoverOperator implements Operator{
         population.setIndividual(posOne, child1);
         population.setIndividual(posTwo, child2);
         double maxChildFitness = Math.max(child1.fitness(), child2.fitness());
-        reward = (maxChildFitness - maxParentFitness) / maxParentFitness;
+//        reward = (maxChildFitness - maxParentFitness) / maxParentFitness;
+        reward = maxChildFitness - maxParentFitness;
     }
 }
