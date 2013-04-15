@@ -17,6 +17,13 @@ public class Population {
         }
     }
 
+    public Population(Population p){
+        population = new ArrayList<HiffIndividual>();
+        for (HiffIndividual i : p.getPopulation()){
+            population.add(new HiffIndividual(i));
+        }
+    }
+
     public HiffIndividual getIndividual(int i){
         if (i >= population.size()){
             return null;
