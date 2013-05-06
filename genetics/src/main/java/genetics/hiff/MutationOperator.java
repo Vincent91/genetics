@@ -43,10 +43,10 @@ public class MutationOperator implements Operator{
             double f = individual.fitness();
             right = left + f;
             if (r < right && r > left){
-                r = rng.nextDouble();
-                if (r > PROBABILITY){
-                    break;
-                }
+//                r = rng.nextDouble();
+//                if (r > PROBABILITY){
+//                    break;
+//                }
                 int possition = Math.abs(rng.nextInt()) % individual.getSize();
                 HiffIndividual mutant = new HiffIndividual(individual);
                 mutant.inverse(possition);
@@ -60,9 +60,17 @@ public class MutationOperator implements Operator{
                         possition = i;
                     }
                 }
+                double parentSum = 0;
+                for (int i = 0; i < population.getSize(); ++i){
+                    parentSum += population.getIndividual(i).fitness();
+                }
+                double childrenSum = parentSum;
+                childrenSum -= population.getIndividual(possition).fitness();
+                childrenSum += mutant.fitness();
                 population.setIndividual(possition, mutant);
+                reward = (childrenSum - parentSum)/* / parentSum*/;
 //                reward = (mutant.fitness() - f) / f;
-                reward = mutant.fitness() - f;
+//                reward = mutant.fitness() - f;
                 break;
             } else {
                 left = right;

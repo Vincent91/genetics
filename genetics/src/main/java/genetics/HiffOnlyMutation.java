@@ -1,12 +1,14 @@
 package genetics;
 
-import genetics.hiff.HiffIndividual;
+import genetics.hiff.*;
 import org.uncommons.maths.random.MersenneTwisterRNG;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by IntelliJ IDEA.
@@ -17,96 +19,164 @@ import java.util.ArrayList;
  */
 public class HiffOnlyMutation {
 
-    public static final int SIZE = 8;
+    public static final int INDIVIDUAL_SIZE = 32;
     public static final int POPULATION_SIZE = 20;
-    public static final double PROBABILITY = 0.2;
-    public static final double OPTIMAL = 32;
     public static final int STEPS_MAX = 100000;
-    public static final String OUTPUT_FILE = "mutation";
-    public static int TRIES = 50;
+    public static final String OUTPUT_FILE_1 = "HybridCrossover.txt";
+    public static final String OUTPUT_FILE_2 = "Mutation.txt";
+    public static final String OUTPUT_FILE_3 = "AdvancedMutation.txt";
+    public static final String OUTPUT_FILE_4 = "RandomTrick.txt";
+    public static int ROUNDS = 101;
+    public static double OPTIMUM = 192;
+
 
     public static void main(String[] args) throws FileNotFoundException {
-        MersenneTwisterRNG random = new MersenneTwisterRNG();
-        PrintWriter writer = new PrintWriter(new File(OUTPUT_FILE));
-        for (int z = 0; z < TRIES; ++z) {
-            System.out.println("#" + z);
-            ArrayList<HiffIndividual> list = new ArrayList<HiffIndividual>();
-            for (int i = 0; i < POPULATION_SIZE; ++i) {
-                list.add(new HiffIndividual(SIZE));
-            }
-            System.out.println("initial population");
-            double max = 0;
-            for (int i = 0; i < POPULATION_SIZE; ++i) {
-                double temp = list.get(i).fitness();
-                if (temp > max) {
-                    max = temp;
-                }
-                System.out.println(list.get(i) + " " + temp);
-            }
-            int step = 0;
-            double sum = 0;
-            double r;
-            double segmentLeft;
-            double segmentRight;
-            while (max < OPTIMAL && step < STEPS_MAX) {
-                step++;
-                for (int i = 0; i < POPULATION_SIZE; ++i) {
-                    sum += list.get(i).fitness();
-                }
-                r = random.nextDouble() * sum;
-                segmentLeft = 0;
-                for (int i = 0; i < POPULATION_SIZE; ++i) {
-                    segmentRight = list.get(i).fitness() + segmentLeft;
-                    if (r < segmentRight && r > segmentLeft) {
-                        HiffIndividual mutant = new HiffIndividual(list.get(i));
-                        //for (int k = 0; k < SIZE; ++k){
-                        //    r = random.nextDouble();
-                        //    if (r < PROBABILITY){
-                        //        mutant.inverse(k);
-                        //    }
-                        //}
-                        r = random.nextDouble();
-                        if (r > PROBABILITY) {
-                            break;
-                        }
-                        r = Math.abs(random.nextInt()) % SIZE;
-                        mutant.inverse((int) r);
-                        int pos = -1;
-                        double minFitness = 0;
-                        for (int k = 0; k < POPULATION_SIZE; ++k) {
-                            double curFitness = list.get(k).fitness();
-                            if (pos == -1) {
-                                if (mutant.fitness() > curFitness) {
-                                    pos = k;
-                                    minFitness = curFitness;
-                                }
-                            } else {
-                                if (curFitness < minFitness) {
-                                    minFitness = curFitness;
-                                    pos = k;
-                                }
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PrintWriter writer = null;
+                try {
+                    MersenneTwisterRNG rng = new MersenneTwisterRNG();
+                    writer = new PrintWriter(new File(OUTPUT_FILE_1));
+                    Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                    HybridOperator operator = new HybridOperator(p, rng);
+                    for (int i = 0; i < ROUNDS; ++i) {
+                        int k = 1;
+                        for (; k <= STEPS_MAX; ++k) {
+                            double fitness = p.getFittest();
+                            if (fitness == OPTIMUM) {
+                                break;
                             }
+                            operator.mutate();
                         }
-                        if (pos != -1) {
-                            list.set(pos, mutant);
-                        }
-                        for (int k = 0; k < POPULATION_SIZE; ++k) {
-                            double curFitness = list.get(k).fitness();
-                            if (curFitness > max) {
-                                max = curFitness;
-                            }
-                        }
-                        break;
-                    } else {
-                        segmentLeft = segmentRight;
+                        System.out.println(i);
+                        writer.println(k);
+                        p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                        operator.setPopulation(p);
                     }
+                    writer.close();
+                } catch (IOException e) {
                 }
-                System.out.println(step + " " + max);
             }
-            writer.println(step + " " + max);
-            writer.flush();
-            System.out.println("-----------------------------------------------------------------");
-        }
-        writer.close();
+        });
+
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PrintWriter writer = null;
+                try {
+                    MersenneTwisterRNG rng = new MersenneTwisterRNG();
+                    writer = new PrintWriter(new File(OUTPUT_FILE_2));
+                    Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                    MutationOperator operator = new MutationOperator(p, rng);
+                    for (int i = 0; i < ROUNDS; ++i) {
+                        int k = 1;
+                        for (; k <= STEPS_MAX; ++k) {
+                            double fitness = p.getFittest();
+                            if (fitness == OPTIMUM) {
+                                break;
+                            }
+                            operator.mutate();
+                        }
+                        System.out.println(i);
+                        writer.println(k);
+                        p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                        operator.setPopulation(p);
+                    }
+                    writer.close();
+                } catch (IOException e) {
+                }
+            }
+        });
+        Thread t3 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PrintWriter writer = null;
+                try {
+                    MersenneTwisterRNG rng = new MersenneTwisterRNG();
+                    writer = new PrintWriter(new File(OUTPUT_FILE_3));
+                    Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                    AdvancedMutationOperator operator = new AdvancedMutationOperator(p, rng);
+                    for (int i = 0; i < ROUNDS; ++i) {
+                        int k = 1;
+                        for (; k <= STEPS_MAX; ++k) {
+                            double fitness = p.getFittest();
+                            if (fitness == OPTIMUM) {
+                                break;
+                            }
+                            operator.mutate();
+                        }
+                        System.out.println(i);
+                        writer.println(k);
+                        p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                        operator.setPopulation(p);
+                    }
+                    writer.close();
+                } catch (IOException e) {
+                }
+            }
+        });
+        Thread t4 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                PrintWriter writer = null;
+                try {
+                    MersenneTwisterRNG rng = new MersenneTwisterRNG();
+                    writer = new PrintWriter(new File(OUTPUT_FILE_4));
+                    Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                    Operator[] operators = new Operator[8];
+                    operators[0] = new CrossoverOperator(p, rng);
+                    operators[1] = new HybridOperator(p, rng);
+                    operators[2] = new MutationOperator(p, rng);
+                    operators[3] = new AdvancedMutationOperator(p, rng);
+                    operators[4] = new MutationOperator(p, rng);
+                    operators[5] = new MutationOperator(p, rng);
+                    operators[6] = new MutationOperator(p, rng);
+                    operators[7] = new MutationOperator(p, rng);
+                    double[] score = new double[101];
+                    for (int i = 0; i < ROUNDS; ++i) {
+                        int k = 1;
+                        for (; k <= STEPS_MAX; ++k) {
+                            double max = operators[0].getPopulation().getFittest();
+                            if (max == OPTIMUM) {
+                                break;
+                            }
+                            double prob = rng.nextDouble();
+                            if (prob < 0.125){
+                                operators[0].mutate();
+                            } else if (prob < 0.25){
+                                operators[1].mutate();
+                            } else if (prob < 0.375){
+                                operators[2].mutate();
+                            } else if (prob < 0.5){
+                                operators[3].mutate();
+                            } else if (prob < 0.625){
+                                operators[4].mutate();
+                            } else if (prob < 0.75){
+                                operators[5].mutate();
+                            } else if (prob < 0.875){
+                                operators[6].mutate();
+                            } else {
+                                operators[7].mutate();
+                            }
+
+                        }
+                        System.out.println(i);
+                        writer.println(k);
+                        score[i] = k;
+                        p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
+                        for (int z = 0; z < operators.length; ++z){
+                            operators[z].setPopulation(p);
+                        }
+                    }
+                    writer.close();
+                    Arrays.sort(score);
+                    System.out.println("51 " + score[50]);
+                } catch (IOException e) {
+                }
+            }
+        });
+//        t3.start();
+        t4.start();
     }
 }

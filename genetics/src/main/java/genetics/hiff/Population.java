@@ -10,6 +10,10 @@ public class Population {
 
     List<HiffIndividual> population;
 
+    public Population(){
+        population = new ArrayList<HiffIndividual>();
+    }
+
     public Population(int n, int m){
         population = new ArrayList<HiffIndividual>();
         for (int i = 0; i < n; ++i){
@@ -53,4 +57,9 @@ public class Population {
         }
         return max;
     }
+
+    public void addIndividual(HiffIndividual h){
+        population.add(h);
+    }
+
 }

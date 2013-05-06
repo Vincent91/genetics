@@ -10,4 +10,6 @@ public interface Operator {
     public double getReward();
 
     public void setPopulation(Population p);
+
+    public Population getPopulation();
 }

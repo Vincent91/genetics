@@ -97,10 +97,20 @@ public class CrossoverOperator implements Operator{
                 minTwo = population.getIndividual(i).fitness();
             }
         }
+        double parentSum = 0;
+        for (int i = 0; i < population.getSize(); ++i){
+            parentSum += population.getIndividual(i).fitness();
+        }
+        double childrenSum = parentSum;
+        childrenSum -= population.getIndividual(posOne).fitness();
+        childrenSum -= population.getIndividual(posTwo).fitness();
+        childrenSum += child1.fitness();
+        childrenSum += child2.fitness();
         population.setIndividual(posOne, child1);
         population.setIndividual(posTwo, child2);
-        double maxChildFitness = Math.max(child1.fitness(), child2.fitness());
-//        reward = (maxChildFitness - maxParentFitness) / maxParentFitness;
-        reward = maxChildFitness - maxParentFitness;
+        reward = (childrenSum - parentSum)/* / parentSum*/;
+        //double maxChildFitness = Math.max(child1.fitness(), child2.fitness());
+        //reward = (maxChildFitness - maxParentFitness) / maxParentFitness;
+        //reward = maxChildFitness - maxParentFitness;
     }
 }
