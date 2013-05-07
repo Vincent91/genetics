@@ -84,5 +84,60 @@ public class HiffIndividual {
     public String toString(){
         return (block.toString());
     }
+
+    public int getMaxFilledBlock(){
+        int max = 1;
+        for (int step = 2; step < block.size(); step *= 2){
+            boolean stepIsReasonable = false;
+            for (int i = 0; i < block.size(); i += step){
+                boolean noDifference = true;
+                for (int k = i; k < i + step - 1; ++k){
+                    if (block.get(k) != block.get(k + 1)){
+                        noDifference = false;
+                        break;
+                    }
+                }
+                if (noDifference){
+                    ++max;
+                    stepIsReasonable = true;
+                    break;
+                }
+            }
+            if (!stepIsReasonable){
+                break;
+            }
+        }
+        return max;
+    }
+
+    public int getMinFilledBlock(){
+        int n = block.size();
+        int min = 0;
+        while (n != 1) {
+            n = n >> 1;
+            ++min;
+        }
+        for (int step = block.size(); step != 1; step /= 2){
+            boolean stepIsReasonable = false;
+            for (int i = 0; i < block.size(); i += step){
+                boolean noDifference = true;
+                for (int k = i; k < i + step - 1; ++k){
+                    if (block.get(k) != block.get(k + 1)){
+                        noDifference = false;
+                        break;
+                    }
+                }
+                if (!noDifference){
+                    --min;
+                    stepIsReasonable = true;
+                    break;
+                }
+            }
+            if (!stepIsReasonable){
+                break;
+            }
+        }
+        return min;
+    }
     
 }
