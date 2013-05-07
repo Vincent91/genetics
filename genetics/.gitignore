@@ -1,0 +1,10 @@
+# IDEA related
+.idea/
+*.iml
+
+# java class files
+target/
+
+# results directory
+save/
+trash/
