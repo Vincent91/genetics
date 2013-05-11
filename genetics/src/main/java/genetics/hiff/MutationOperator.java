@@ -65,13 +65,18 @@ public class MutationOperator implements Operator{
                     parentSum += population.getIndividual(i).fitness();
                 }
                 double childrenSum = parentSum;
-                if (mutant.fitness() > f){
-                    childrenSum -= population.getIndividual(possition).fitness();
+                childrenSum = childrenSum - min + mutant.fitness();
+                if (childrenSum > parentSum){
                     population.setIndividual(possition, mutant);
-                    childrenSum += mutant.fitness();
-
                 }
-                reward = (childrenSum - parentSum)/* / parentSum*/;
+                if (childrenSum > parentSum) {
+                    reward = 1;
+                } else if (childrenSum == parentSum){
+                    reward = 0.5;
+                } else {
+                    reward = 0;
+                }
+//                reward = (childrenSum - parentSum)/* / parentSum*/;
 //                reward = (mutant.fitness() - f) / f;
 //                reward = mutant.fitness() - f;
                 break;

@@ -7,8 +7,6 @@ import org.uncommons.maths.random.MersenneTwisterRNG;
  */
 public class AdvancedMutationOperator implements Operator{
 
-    private static final double PROBABILITY = 0.1;
-
     private Population population;
     private MersenneTwisterRNG rng;
     private double reward;
@@ -53,7 +51,7 @@ public class AdvancedMutationOperator implements Operator{
                     mutant.inverse(i);
                 }
                 possition = 0;
-                /*double min = population.getIndividual(0).fitness();
+                double min = population.getIndividual(0).fitness();
                 double fitnessStore;
                 for (int i = 1; i < population.getSize(); ++i){
                     fitnessStore = population.getIndividual(i).fitness();
@@ -67,12 +65,19 @@ public class AdvancedMutationOperator implements Operator{
                     parentSum += population.getIndividual(i).fitness();
                 }
                 double childrenSum = parentSum;
-                childrenSum -= population.getIndividual(possition).fitness();
-                childrenSum += mutant.fitness();*/
-                if (mutant.fitness() > population.getIndividual(possition).fitness()) {
+                childrenSum -= min;
+                childrenSum += mutant.fitness();
+                if (childrenSum > parentSum) {
                     population.setIndividual(possition, mutant);
                 }
-                reward = population.getIndividual(possition).fitness() - f;
+                if (childrenSum > parentSum){
+                    reward = 1;
+                } else if (childrenSum == parentSum) {
+                    reward = 0.5;
+                } else {
+                    reward = 0;
+                }
+//                reward = population.getIndividual(possition).fitness() - f;
 //                reward = (childrenSum - parentSum)/* / parentSum*/;
 //                reward = (mutant.fitness() - f) / f;
 //                reward = mutant.fitness() - f;
