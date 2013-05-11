@@ -1,9 +1,6 @@
 package genetics;
 
-import genetics.hiff.AdvancedMutationOperator;
-import genetics.hiff.HiffIndividual;
-import genetics.hiff.MutationOperator;
-import genetics.hiff.Population;
+import genetics.hiff.*;
 import org.uncommons.maths.random.MersenneTwisterRNG;
 
 import java.util.Arrays;
@@ -17,11 +14,11 @@ public class MinBlockStatesMain {
     private static final MersenneTwisterRNG rng = new MersenneTwisterRNG();
 
     private static final int POPULATION_SIZE = 1;
-    private static final int INDIVIDUAL_SIZE = 64;
+    private static final int INDIVIDUAL_SIZE = 32;
 
     private static final double ALPHA = 0.2;
     private static final double GAMMA = 0.4;
-    private static final double BETHA = 10;
+    private static final double BETHA = 100;
 
     private static final int powerOfTwo = Integer.numberOfTrailingZeros(INDIVIDUAL_SIZE) + 1;
 
@@ -45,24 +42,15 @@ public class MinBlockStatesMain {
         for (int pop = 0; pop < GLOBAL_STEPS; ++pop){
             Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
             Population randomP = new Population(p);
-            Population thirdPopulation = new Population(p);
             AdvancedMutationOperator amo = new AdvancedMutationOperator(p, rng);
             MutationOperator mo = new MutationOperator(p, rng);
-            AdvancedMutationOperator thirdAMO = new AdvancedMutationOperator(new Population(thirdPopulation), rng);
-            MutationOperator thirdMO = new MutationOperator(new Population(thirdPopulation), rng);
             Store[] states = new Store[powerOfTwo];
-            Store[] thirdStates = new Store[powerOfTwo];
             for (int i = 0; i < states.length; ++i){
                 states[i] = new Store(rng);
                 states[i].addOperator(amo);
                 states[i].addOperator(mo);
                 states[i].setBetha(BETHA);
                 states[i].initProbabilities();
-                thirdStates[i] = new Store(rng);
-                thirdStates[i].addOperator(thirdAMO);
-                thirdStates[i].addOperator(thirdMO);
-                thirdStates[i].setBetha(BETHA);
-                thirdStates[i].initProbabilities();
             }
             int state = getState(p.getIndividual(0));
             for (int iterations = 0; iterations < MAX_STEPS / ONE_STEP; ++iterations) {
