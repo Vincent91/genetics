@@ -58,10 +58,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MinBlockStatesMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MinBlockStatesMain.java">
+      <file leaf-file-name="HiffOnlyMutation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="25" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+            <state line="180" column="30" selection-start="7732" selection-end="7732" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxBlockStatesGen.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="40" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.28150135">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,19 +78,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Operator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/Operator.java">
+      <file leaf-file-name="MaxBlockMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="17" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="37" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#541#557#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdvancedMutationOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/AdvancedMutationOperator.java">
+      <file leaf-file-name="HiffRL.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffRL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="87" selection-start="0" selection-end="2984" vertical-scroll-proportion="0.0">
+            <state line="30" column="29" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,61 +102,25 @@
       <file leaf-file-name="CrossoverOperator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CrossoverOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="68" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
+            <state line="115" column="17" selection-start="3891" selection-end="3891" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MutationOperator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdvancedMutationOperator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/AdvancedMutationOperator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="28" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MutationOperator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/MutationOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="62" selection-start="0" selection-end="2838" vertical-scroll-proportion="0.72727275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BadMutationOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/BadMutationOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="10" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/Hat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="53" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HiffOnlyCrossover.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyCrossover.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HiffOnlyMutation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="43" selection-start="7732" selection-end="7732" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HiffIndividual.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/HiffIndividual.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,22 +136,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/State.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/Population.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/Operator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/Store.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/StatesMain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CrossoverOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/HybridOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/HiffOnlyCrossover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/HiffRL.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/HiffIndividual.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/Hat.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/BadMutationOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/MutationOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/AdvancedMutationOperator.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/MinBlockStatesMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CrossoverOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGenMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/HiffRL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java" />
       </list>
     </option>
   </component>
@@ -207,10 +183,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1215" />
-    <option name="height" value="776" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1217" />
+    <option name="height" value="805" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,16 +224,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="genetics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -306,34 +272,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genetics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genetics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genetics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hiff" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -355,61 +301,7 @@
       <recent name="genetics.hiff" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MinBlockStatesMain">
-    <configuration default="false" name="StatesMain" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="genetics.StatesMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="genetics" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Hat" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="genetics.Hat" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="genetics" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HiffOnlyCrossover" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="genetics.HiffOnlyCrossover" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="genetics" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.MaxBlockMain">
     <configuration default="false" name="HiffOnlyMutation" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="genetics.HiffOnlyMutation" />
       <option name="VM_PARAMETERS" />
@@ -445,6 +337,60 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MaxBlockStatesGenMain" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="genetics.MaxBlockStatesGenMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="genetics" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MaxBlockMain" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="genetics.MaxBlockMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="genetics" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HiffRL" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="genetics.HiffRL" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="genetics" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -566,11 +512,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.StatesMain" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Hat" />
-      <item index="2" class="java.lang.String" itemvalue="Application.HiffOnlyCrossover" />
-      <item index="3" class="java.lang.String" itemvalue="Application.HiffOnlyMutation" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MinBlockStatesMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.HiffOnlyMutation" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MinBlockStatesMain" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MaxBlockStatesGenMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MaxBlockMain" />
+      <item index="4" class="java.lang.String" itemvalue="Application.HiffRL" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -606,28 +552,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1215" height="776" extended-state="6" />
+    <frame x="64" y="-4" width="1217" height="805" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.60213417" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.60213417" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39786586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.23628049" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990575" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.6356707" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36432928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.6371951" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3628049" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -690,49 +636,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/HybridOperator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/BadMutationOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="11" selection-start="637" selection-end="637" vertical-scroll-proportion="0.44642857" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/StatesMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffRL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="74" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyCrossover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="43" selection-start="7732" selection-end="7732" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/HiffIndividual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0" />
+        <state line="63" column="10" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/Hat.java">
@@ -740,47 +646,102 @@
         <state line="51" column="53" selection-start="2001" selection-end="2001" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MinBlockStatesMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyCrossover.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="25" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/Operator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+        <state line="5" column="17" selection-start="101" selection-end="101" vertical-scroll-proportion="0.12274959" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="11" selection-start="637" selection-end="637" vertical-scroll-proportion="0.004909984">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/BadMutationOperator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="10" selection-start="1954" selection-end="1954" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CrossoverOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="68" selection-start="1675" selection-end="1675" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/AdvancedMutationOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="87" selection-start="0" selection-end="2984" vertical-scroll-proportion="0.0">
+        <state line="13" column="20" selection-start="256" selection-end="256" vertical-scroll-proportion="0.31914893">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/MutationOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="62" selection-start="0" selection-end="2838" vertical-scroll-proportion="0.72727275">
+        <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CrossoverOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="17" selection-start="3891" selection-end="3891" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/AdvancedMutationOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="28" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MinBlockStatesMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="23" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/StatesMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="43" selection-start="3603" selection-end="3603" vertical-scroll-proportion="0.14402619">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffOnlyMutation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="30" selection-start="7732" selection-end="7732" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/HiffIndividual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="33" selection-start="3347" selection-end="3347" vertical-scroll-proportion="0.23592493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/HiffRL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="29" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="40" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.28150135">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

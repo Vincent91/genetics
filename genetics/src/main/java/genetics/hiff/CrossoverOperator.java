@@ -102,13 +102,53 @@ public class CrossoverOperator implements Operator{
             parentSum += population.getIndividual(i).fitness();
         }
         double childrenSum = parentSum;
-        childrenSum -= population.getIndividual(posOne).fitness();
-        childrenSum -= population.getIndividual(posTwo).fitness();
-        childrenSum += child1.fitness();
-        childrenSum += child2.fitness();
-        population.setIndividual(posOne, child1);
-        population.setIndividual(posTwo, child2);
-        reward = (childrenSum - parentSum)/* / parentSum*/;
+        if (minOne > minTwo) {
+            double temp = minOne;
+            minOne = minTwo;
+            minTwo = temp;
+            int tempPos = posOne;
+            posOne = posTwo;
+            posTwo = tempPos;
+        }
+        double childOneFit = child1.fitness();
+        double childTwoFit = child2.fitness();
+        if (childOneFit > childTwoFit){
+            double temp = childOneFit;
+            childOneFit = childTwoFit;
+            childTwoFit = temp;
+            HiffIndividual tempChild = child1;
+            child1 = child2;
+            child2 = tempChild;
+        }
+        if (childOneFit > minOne){
+            population.setIndividual(posOne, child1);
+            if (childTwoFit > minTwo){
+                population.setIndividual(posTwo, child2);
+                reward = 1;
+            } else {
+                population.setIndividual(posOne, child2);
+                reward = 0.5;
+            }
+        } else {
+            if (childTwoFit > minOne){
+                population.setIndividual(posOne, child2);
+                reward = 0.5;
+            } else {
+                reward = 0;
+            }
+        }
+//        childrenSum -= population.getIndividual(posOne).fitness();
+//        childrenSum -= population.getIndividual(posTwo).fitness();
+//        childrenSum += child1.fitness();
+//        childrenSum += child2.fitness();
+//        if (childrenSum > parentSum){
+//            reward = 1;
+//            population.setIndividual(posOne, child1);
+//            population.setIndividual(posTwo, child2);
+//        } else {
+//            reward = 0;
+//        }
+//        reward = (childrenSum - parentSum)/* / parentSum*/;
         //double maxChildFitness = Math.max(child1.fitness(), child2.fitness());
         //reward = (maxChildFitness - maxParentFitness) / maxParentFitness;
         //reward = maxChildFitness - maxParentFitness;
