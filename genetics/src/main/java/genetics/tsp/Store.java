@@ -1,10 +1,8 @@
-package genetics;
+package genetics.tsp;
 
-import com.sun.xml.internal.fastinfoset.QualifiedName;
-import genetics.hiff.Operator;
-import genetics.hiff.Population;
+import genetics.tsp.Operator;
+import genetics.tsp.TspPopulation;
 import org.uncommons.maths.random.MersenneTwisterRNG;
-import sun.print.PSPrinterJob;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +38,7 @@ public class Store {
         p.add(0.0);
     }
 
-    public void setPopulation(Population p){
+    public void setPopulation(TspPopulation p){
         for (int i = 0; i < operators.size(); ++i){
             operators.get(i).setPopulation(p);
         }

@@ -26,7 +26,10 @@ public class HiffIndividual {
     public HiffIndividual(int n){
         block = new ArrayList<Integer>();
         for (int i = 0; i < n; ++i){
-            boolean a = RNG.nextBoolean();
+            boolean a;
+            synchronized (RNG){
+                a = RNG.nextBoolean();
+            }
             if (a){
                 block.add(1);
             } else {

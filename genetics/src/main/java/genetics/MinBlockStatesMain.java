@@ -13,24 +13,31 @@ public class MinBlockStatesMain {
 
     private static final MersenneTwisterRNG rng = new MersenneTwisterRNG();
 
-    private static final int POPULATION_SIZE = 1;
+    private static final int POPULATION_SIZE = 10;
     private static final int INDIVIDUAL_SIZE = 64;
 
     private static final double ALPHA = 0.2;
     private static final double GAMMA = 0.4;
-    private static final double BETHA = 100;
+    private static final double BETHA = 0.1;
 
     private static final int powerOfTwo = Integer.numberOfTrailingZeros(INDIVIDUAL_SIZE) + 1;
 
     private static final double OPTIMUM = new HiffIndividual(Collections.nCopies(INDIVIDUAL_SIZE, 1)).fitness();
 
     private static final int MAX_STEPS = 10000;
-    private static final int ONE_STEP = 1;
+    private static final int ONE_STEP = 100;
 
-    private static final int GLOBAL_STEPS = 1001;
+    private static final int GLOBAL_STEPS = 51;
 
-    private static int getState(HiffIndividual ind) {
-        return ind.getMaxFilledBlock();
+    private static int getState(Population p) {
+        int max = -1;
+        for (HiffIndividual i : p.getPopulation()){
+            int t = i.getMaxFilledBlock();
+            if (t > max) {
+                max = t;
+            }
+        }
+        return max;
     }
 
     public static void main(String[] args){
@@ -40,22 +47,24 @@ public class MinBlockStatesMain {
         Arrays.fill(resultsRandom, Double.POSITIVE_INFINITY);
 
         for (int pop = 0; pop < GLOBAL_STEPS; ++pop){
-            if (pop % 100 == 0){
+            if (pop % 10 == 0){
                 System.out.println(pop);
             }
             Population p = new Population(POPULATION_SIZE, INDIVIDUAL_SIZE);
             Population randomP = new Population(p);
-            AdvancedMutationOperator amo = new AdvancedMutationOperator(p, rng);
-            MutationOperator mo = new MutationOperator(p, rng);
+            CAMO amo = new CAMO(p, rng);
+            CMO mo = new CMO(p, rng);
+            CCO cco = new CCO(p, rng);
             Store[] states = new Store[powerOfTwo];
             for (int i = 0; i < states.length; ++i){
                 states[i] = new Store(rng);
                 states[i].addOperator(amo);
                 states[i].addOperator(mo);
+                states[i].addOperator(cco);
                 states[i].setBetha(BETHA);
                 states[i].initProbabilities();
             }
-            int state = getState(p.getIndividual(0));
+            int state = getState(p);
             for (int iterations = 0; iterations < MAX_STEPS / ONE_STEP; ++iterations) {
                 for (int steps = 0; steps < ONE_STEP; ++steps){
                     states[state].chooseOperator().mutate();
@@ -63,8 +72,8 @@ public class MinBlockStatesMain {
                     double q = states[state].getQ(states[state].getChoosen());
                     q = q + ALPHA * (reward + GAMMA * states[state].getMaxQ() - q);
                     states[state].setQ(states[state].getChoosen(), q);
-                    state = getState(p.getIndividual(0));
-                    if (p.getIndividual(0).fitness() == OPTIMUM){
+                    state = getState(p);
+                    if (p.getFittest() == OPTIMUM){
                         results[pop] = iterations * ONE_STEP + steps;
                         iterations = MAX_STEPS;
                         break;
@@ -74,16 +83,19 @@ public class MinBlockStatesMain {
                     states[i].countProbabilites();
                 }
             }
-            AdvancedMutationOperator randomAMO = new AdvancedMutationOperator(randomP, rng);
-            MutationOperator randomMO = new MutationOperator(randomP, rng);
+            CAMO randomAMO = new CAMO(randomP, rng);
+            CMO randomMO = new CMO(randomP, rng);
+            CCO randomCCO = new CCO(randomP, rng);
             for (int steps = 0; steps < MAX_STEPS; ++steps){
                 double r = rng.nextDouble();
-                if (r < 0.5){
+                if (r < 0.33){
                     randomAMO.mutate();
-                } else {
+                } else if (r < 0.66) {
                     randomMO.mutate();
+                } else {
+                    randomCCO.mutate();
                 }
-                if (randomP.getIndividual(0).fitness() == OPTIMUM){
+                if (randomP.getFittest() == OPTIMUM){
                     resultsRandom[pop] = steps;
                     break;
                 }

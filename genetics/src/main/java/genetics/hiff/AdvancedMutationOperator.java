@@ -64,12 +64,21 @@ public class AdvancedMutationOperator implements Operator{
                 for (int i = 0; i < population.getSize(); ++i){
                     parentSum += population.getIndividual(i).fitness();
                 }
+                double oldFittest = population.getFittest();
                 double childrenSum = parentSum;
                 childrenSum -= min;
                 childrenSum += mutant.fitness();
                 if (childrenSum > parentSum) {
                     population.setIndividual(possition, mutant);
                 }
+                double newFittest = population.getFittest();
+//                if (newFittest > oldFittest){
+//                    reward = 1;
+//                } else if (newFittest == oldFittest) {
+//                    reward = 0.5;
+//                } else {
+//                    reward = 0;
+//                }
                 if (childrenSum > parentSum){
                     reward = 1;
                 } else if (childrenSum == parentSum) {

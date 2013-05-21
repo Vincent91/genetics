@@ -50,6 +50,7 @@ public class MutationOperator implements Operator{
                 int possition = Math.abs(rng.nextInt()) % individual.getSize();
                 HiffIndividual mutant = new HiffIndividual(individual);
                 mutant.inverse(possition);
+                double oldFittest = population.getFittest();
                 possition = 0;
                 double min = population.getIndividual(0).fitness();
                 double fitnessStore;
@@ -69,6 +70,9 @@ public class MutationOperator implements Operator{
                 if (childrenSum > parentSum){
                     population.setIndividual(possition, mutant);
                 }
+                double newFittest = population.getFittest();
+//                System.out.println("Parent sum " + parentSum + " child sum " + childrenSum + " oldF " + oldFittest +
+//                        " newF " + newFittest);
                 if (childrenSum > parentSum) {
                     reward = 1;
                 } else if (childrenSum == parentSum){
@@ -76,6 +80,13 @@ public class MutationOperator implements Operator{
                 } else {
                     reward = 0;
                 }
+//                if (newFittest > oldFittest) {
+//                    reward = 1;
+//                } else if (newFittest == oldFittest) {
+//                    reward = 0.5;
+//                } else {
+//                    reward = 0;
+//                }
 //                reward = (childrenSum - parentSum)/* / parentSum*/;
 //                reward = (mutant.fitness() - f) / f;
 //                reward = mutant.fitness() - f;

@@ -101,6 +101,7 @@ public class CrossoverOperator implements Operator{
         for (int i = 0; i < population.getSize(); ++i){
             parentSum += population.getIndividual(i).fitness();
         }
+        double oldFittest = population.getFittest();
         double childrenSum = parentSum;
         if (minOne > minTwo) {
             double temp = minOne;
@@ -124,18 +125,26 @@ public class CrossoverOperator implements Operator{
             population.setIndividual(posOne, child1);
             if (childTwoFit > minTwo){
                 population.setIndividual(posTwo, child2);
-                reward = 1;
+//                reward = 1;
             } else {
                 population.setIndividual(posOne, child2);
-                reward = 0.5;
+//                reward = 0.5;
             }
         } else {
             if (childTwoFit > minOne){
                 population.setIndividual(posOne, child2);
-                reward = 0.5;
+//                reward = 0.5;
             } else {
-                reward = 0;
+//                reward = 0;
             }
+        }
+        double newFittest = population.getFittest();
+        if (newFittest > oldFittest) {
+            reward = 1;
+        } else if (newFittest == oldFittest) {
+            reward = 0.5;
+        } else {
+            reward = 0;
         }
 //        childrenSum -= population.getIndividual(posOne).fitness();
 //        childrenSum -= population.getIndividual(posTwo).fitness();
