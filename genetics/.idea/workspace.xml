@@ -19,19 +19,6 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CAMO.java" line="38" class="genetics.hiff.CAMO" package="genetics.hiff">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java" line="73" class="genetics.tsp.MPX2" package="genetics.tsp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -46,6 +33,71 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java" line="94" class="genetics.tsp.MPX2" package="genetics.tsp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" line="87" class="genetics.tsp.CounterGreedy" package="genetics.tsp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" line="92" class="genetics.tsp.CounterGreedy" package="genetics.tsp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" line="123" class="genetics.tsp.CounterGreedy" package="genetics.tsp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" line="129" class="genetics.tsp.CounterGreedy" package="genetics.tsp">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" line="140" class="genetics.tsp.CounterGreedy" package="genetics.tsp">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -99,13 +151,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SwapOperator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/SwapOperator.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="28" column="78" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterGreedy.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="151" column="40" selection-start="5055" selection-end="5055" vertical-scroll-proportion="0.44126076">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,16 +172,7 @@
       <file leaf-file-name="InverseOperator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/InverseOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="44" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TspPopulation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/TspPopulation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="16" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,59 +181,16 @@
       <file leaf-file-name="ScrambleOperator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/ScrambleOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="43" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1782#1791#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MPX1.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="13" selection-start="0" selection-end="3793" vertical-scroll-proportion="0.0">
+            <state line="14" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Main.java">
+      <file leaf-file-name="SwapOperator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/SwapOperator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="38" selection-start="818" selection-end="818" vertical-scroll-proportion="0.24431819">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Counter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Counter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="48" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1605#1612#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MPX2.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="24" selection-start="3577" selection-end="3577" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2665#2683#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TspIndividual.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/TspIndividual.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+            <state line="10" column="13" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -206,22 +213,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/genetics/Store.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CCO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CMO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CAMO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/HiffRL.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/Store.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/TspPopulation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/MPX1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/InverseOperator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/SwapOperator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/ScrambleOperator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/CounterP1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/TspIndividual.java" />
         <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/Counter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/MPX1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/GraphGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/InverseOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/ScrambleOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/SwapOperator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CAMO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CMO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/hiff/CBMO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java" />
       </list>
     </option>
   </component>
@@ -253,10 +260,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1215" />
-    <option name="height" value="776" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1217" />
+    <option name="height" value="805" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -290,6 +297,20 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genetics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genetics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -370,32 +391,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genetics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genetics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -403,44 +410,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="MaxBlockMain" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="genetics.MaxBlockMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="genetics" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="HiffRL" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="genetics.HiffRL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="genetics" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="genetics.tsp.Main" />
       <option name="VM_PARAMETERS" />
@@ -507,6 +476,38 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="GraphGenerator" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="genetics.tsp.GraphGenerator" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="genetics" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MaxBlockMain" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="genetics.MaxBlockMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="genetics" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -527,24 +528,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -573,6 +556,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -625,11 +626,11 @@
       </method>
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.MaxBlockMain" />
-      <item index="1" class="java.lang.String" itemvalue="Application.HiffRL" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Hat" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MinBlockStatesMain" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Hat" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MinBlockStatesMain" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GraphGenerator" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MaxBlockMain" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -665,28 +666,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1215" height="776" extended-state="6" />
+    <frame x="64" y="-4" width="1217" height="805" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990575" sideWeight="0.60213417" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.60213417" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.60213417" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39786586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3628049" sideWeight="0.49700084" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39481708" sideWeight="0.5072836" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24935733" sideWeight="0.23628049" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990575" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.60518295" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39481708" sideWeight="0.49700084" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.589939" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41006097" sideWeight="0.4867181" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -749,123 +750,108 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/GraphGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="32" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/Store.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="5" selection-start="2600" selection-end="3639" vertical-scroll-proportion="0.0">
+        <state line="70" column="26" selection-start="1587" selection-end="1587" vertical-scroll-proportion="0.9524564" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="306" selection-end="306" vertical-scroll-proportion="0.4558011" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="102" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.02377179">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CHO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="68" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.6418384">
+        <state line="7" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CMO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="9" selection-start="751" selection-end="1909" vertical-scroll-proportion="0.0">
+        <state line="9" column="47" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/JDK/jdk1.7.0_07/src.zip!/java/util/Random.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CBMO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="15" selection-start="11001" selection-end="11001" vertical-scroll-proportion="0.024549918">
+        <state line="9" column="47" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="75" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/MaxBlockStatesGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="373" selection-end="373" vertical-scroll-proportion="-0.85924715">
+        <state line="241" column="37" selection-start="8810" selection-end="8810" vertical-scroll-proportion="0.4883041">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/TspIndividual.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CAMO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+        <state line="9" column="47" selection-start="227" selection-end="227" vertical-scroll-proportion="0.08287293">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/TspPopulation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterP1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+        <state line="16" column="13" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/hiff/CCO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/InverseOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="52" selection-start="73" selection-end="76" vertical-scroll-proportion="0.09933775">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="21" selection-start="3217" selection-end="3217" vertical-scroll-proportion="0.89689034">
+        <state line="7" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/ScrambleOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1782#1791#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="0" selection-end="3793" vertical-scroll-proportion="0.0">
+        <state line="14" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/SwapOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="43" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/InverseOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="44" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/MPX2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="24" selection-start="3577" selection-end="3577" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2665#2683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Counter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1605#1612#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="818" selection-end="818" vertical-scroll-proportion="0.24431819">
+        <state line="28" column="78" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/genetics/tsp/CounterGreedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="40" selection-start="5055" selection-end="5055" vertical-scroll-proportion="0.44126076">
           <folding />
         </state>
       </provider>

@@ -10,7 +10,7 @@ import org.uncommons.maths.random.MersenneTwisterRNG;
  */
 public class SwapOperator implements Operator {
 
-    private static double PROBABILITY = 0.3;
+    private static double PROBABILITY = 1;
 
     private TspPopulation population;
     private MersenneTwisterRNG rng;
@@ -49,11 +49,11 @@ public class SwapOperator implements Operator {
                 TspIndividual mutant = new TspIndividual(population.getIndividual(i));
                 int possition1;
                 synchronized (rng){
-                    possition1 = Math.abs(rng.nextInt()) % mutant.size();
+                    possition1 = rng.nextInt(mutant.size());// % mutant.size();
                 }
                 int possition2;
                 synchronized (rng){
-                    possition2 = Math.abs(rng.nextInt()) % mutant.size();
+                    possition2 = rng.nextInt(mutant.size());// % mutant.size();
                 }
                 int[] path = mutant.getPath();
                 int temp = path[possition1];
@@ -61,6 +61,9 @@ public class SwapOperator implements Operator {
                 path[possition2] = temp;
                 mutant.setPath(path);
                 offspring.addIndividual(mutant);
+                if (!mutant.check()){
+                    System.out.println("ALARM!!!");
+                }
             } else {
                 offspring.addIndividual(new TspIndividual(population.getIndividual(i)));
             }
@@ -72,6 +75,7 @@ public class SwapOperator implements Operator {
         double bestNew = offspring.getFittest();
         if (bestNew < bestOld){
             reward = 1;
+//            reward = (bestOld - bestNew) / bestOld;
             for (int i = 0; i < population.getSize(); ++i){
                 population.setIndividual(i, offspring.getIndividual(i));
             }

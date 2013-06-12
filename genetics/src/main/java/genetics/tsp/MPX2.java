@@ -115,6 +115,12 @@ public class MPX2 implements Operator {
                 }
                 path2[k] = city;
             }
+            if (!ancestorOne.check()){
+                System.out.println("ALARM!!!");
+            }
+            if (!ancestorTwo.check()){
+                System.out.println("ALARM!!!");
+            }
             offspring.addIndividual(ancestorOne);
             offspring.addIndividual(ancestorTwo);
         }
@@ -125,6 +131,7 @@ public class MPX2 implements Operator {
         double bestNew = offspring.getFittest();
         if (bestNew < bestOld){
             reward = 1;
+//            reward = (bestOld - bestNew) / bestOld;
             for (int i = 0; i < population.getSize(); ++i){
                 population.setIndividual(i, offspring.getIndividual(i));
             }

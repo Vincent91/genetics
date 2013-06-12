@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ScrambleOperator implements Operator {
 
-    private static double PROBABILITY = 0.3;
+    private static double PROBABILITY = 1;
 
     private TspPopulation population;
     private MersenneTwisterRNG rng;
@@ -72,6 +72,9 @@ public class ScrambleOperator implements Operator {
                 }
                 mutant.setPath(path);
                 offspring.addIndividual(mutant);
+                if (!mutant.check()){
+                    System.out.println("ALARM!!!");
+                }
             } else {
                 offspring.addIndividual(new TspIndividual(population.getIndividual(i)));
             }
@@ -83,6 +86,7 @@ public class ScrambleOperator implements Operator {
         double bestNew = offspring.getFittest();
         if (bestNew < bestOld){
             reward = 1;
+//            reward = (bestOld - bestNew) / bestOld;
             for (int i = 0; i < population.getSize(); ++i){
                 population.setIndividual(i, offspring.getIndividual(i));
             }

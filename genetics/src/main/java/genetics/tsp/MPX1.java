@@ -76,7 +76,11 @@ public class MPX1 implements Operator {
                 path[k] = ancestorOne.getPath()[k];
                 path2[k] = ancestorTwo.getPath()[k];
             }
-            for (int k = 0; k < ancestorTwo.size(); ++k){
+            int border = 0;
+            synchronized (rng){
+                border = rng.nextInt(ancestorOne.size() - 1);
+            }
+            for (int k = 0; k < border; ++k){
                 int pos = k;
                 for (int z = k + 1; z < path.length; ++z){
                     if (ancestorTwo.getPath()[k] == path[z]){
@@ -88,7 +92,7 @@ public class MPX1 implements Operator {
                 path[k] = path[pos];
                 path[pos] = temp;
             }
-            for (int k = 0; k < ancestorOne.size(); ++k){
+            for (int k = 0; k < border; ++k){
                 int pos = k;
                 for (int z = k + 1; z < path2.length; ++z){
                     if (ancestorOne.getPath()[k] == path2[z]){
@@ -100,6 +104,12 @@ public class MPX1 implements Operator {
                 path2[k] = path2[pos];
                 path2[pos] = temp;
             }
+            if (!ancestorOne.check()){
+                System.out.println("ALARM!!!");
+            }
+            if (!ancestorTwo.check()){
+                System.out.println("ALARM!!!");
+            }
             offspring.addIndividual(ancestorOne);
             offspring.addIndividual(ancestorTwo);
         }
@@ -110,6 +120,7 @@ public class MPX1 implements Operator {
         double bestNew = offspring.getFittest();
         if (bestNew < bestOld){
             reward = 1;
+//            reward = (bestOld - bestNew) / bestOld;
             for (int i = 0; i < population.getSize(); ++i){
                 population.setIndividual(i, offspring.getIndividual(i));
             }

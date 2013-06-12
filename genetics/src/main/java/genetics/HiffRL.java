@@ -19,22 +19,30 @@ import java.util.Scanner;
 public class HiffRL {
 
     public static void main(String[] args) throws FileNotFoundException {
-        File f = new File("synchr64_ver2.out");
+        File f = new File("resultsTSPGreedyBig.out");
         Scanner scanner = new Scanner(f);
         scanner.useLocale(Locale.ENGLISH);
+        double[] results = new double[101];
+        int i = 0;
         while (scanner.hasNext()){
             double alpha = scanner.nextDouble();
             double gamma = scanner.nextDouble();
             double betha = scanner.nextDouble();
-            double step = scanner.nextDouble();
+            double step = 0;
             double exp = scanner.nextDouble();
             double ranExp = scanner.nextDouble();
             double dev = scanner.nextDouble();
             double ranDev = scanner.nextDouble();
+            results[i] = ranExp - exp;
+            ++i;
 //            System.out.format("%.2f\n", (ranExp - exp));
-            if (ranExp - exp > 60){
-                System.out.format("%.2f %.2f %.2f\n", alpha, gamma, ranExp - exp);
+            if (ranExp - exp > 400){
+                System.out.format("%.2f %.2f %.2f %.2f %.2f %.2f\n", alpha, gamma, exp, ranExp, dev, ranDev);
             }
         }
+//        Arrays.sort(results);
+//        for (double d : results){
+//            System.out.println(d);
+//        }
     }
 }

@@ -14,34 +14,28 @@ import java.util.concurrent.CountDownLatch;
  */
 public class MaxBlockStatesGen implements Callable<String> {
 
-    public MaxBlockStatesGen(double a, double g, double b, int learning){
-        this(a, g, b, learning, 10, 64);
-    }
-
-    public MaxBlockStatesGen(double a, double g,double b, int learning, int ps, int is){
+    public MaxBlockStatesGen(double a, double g,double b, int learning, boolean gr){
         alpha = a;
         gamma = g;
         betha = b;
         ONE_STEP = learning;
-        populationSize = ps;
-        individualSize = is;
-
-        powerOfTwo = Integer.numberOfTrailingZeros(individualSize) + 1;
-        OPTIMUM = new HiffIndividual(Collections.nCopies(individualSize, 1)).fitness();
+        greedy = gr;
     }
+
+    private boolean greedy;
 
     private static final MersenneTwisterRNG rng = new MersenneTwisterRNG();
 
-    private int populationSize;
-    private int individualSize;
+    private static int populationSize = 1;
+    private static int individualSize = 64;
 
     private double alpha;
     private double gamma;
     private double betha;
 
-    private int powerOfTwo;
+    private static int powerOfTwo = Integer.numberOfTrailingZeros(individualSize) + 1;
 
-    private double OPTIMUM;
+    private static double OPTIMUM = new HiffIndividual(Collections.nCopies(individualSize, 1)).fitness();;
 
     private static final int MAX_STEPS = 10000;
     private int ONE_STEP = 100;
@@ -61,13 +55,17 @@ public class MaxBlockStatesGen implements Callable<String> {
         return state;
     }
 
+    private static int OPERATIONS_NUMBER = 3;
+
     private static Population[] habitat = generate();
     private static double[] resultsRandom;
+    private static double[] operationCounter;
 
     private static Population[] generate(){
         Population[] h = new Population[GLOBAL_STEPS];
+        operationCounter = new double[OPERATIONS_NUMBER];
         for (int pop = 0; pop < GLOBAL_STEPS; ++pop){
-            h[pop] = new Population(10, 64);
+            h[pop] = new Population(populationSize, individualSize);
         }
         resultsRandom = new double[GLOBAL_STEPS];
         Arrays.fill(resultsRandom, Double.POSITIVE_INFINITY);
@@ -76,25 +74,43 @@ public class MaxBlockStatesGen implements Callable<String> {
                 System.out.println("random pop " + pop);
             }
             Population randomP = new Population(h[pop]);
+            Store store = new Store(rng);
             CAMO randomAMO = new CAMO(randomP, rng);
             CMO randomMO = new CMO(randomP, rng);
+            CBMO randomCBMO = new CBMO(randomP, rng);
             CCO randomCO = new CCO(randomP, rng);
             CHO randomCHO = new CHO(randomP, rng);
+            store.addOperator(randomAMO);
+            store.addOperator(randomMO);
+//            store.addOperator(randomCHO);
+//            store.addOperator(randomCO);
+            store.addOperator(randomCBMO);
+            store.initProbabilities();
+            store.initQ();
             for (int steps = 0; steps < MAX_STEPS; ++steps){
-                double r;
-                synchronized (rng){
-                    r = rng.nextDouble();
-                }
-                if (r < 0.25){
-                    randomAMO.mutate();
-                } else if (r < 0.5) {
-                    randomMO.mutate();
-                } else if (r < 0.75) {
-                    randomCO.mutate();
-                } else {
-                    randomCHO.mutate();
-                }
-                if (randomP.getFittest() == 448){
+//                double r;
+//                synchronized (rng){
+//                    r = rng.nextDouble();
+//                }
+//                if (r < 0.2){
+//                    randomAMO.mutate();
+//                    operationCounter[0]++;
+//                } else if (r < 0.40) {
+//                    randomMO.mutate();
+//                    operationCounter[1]++;
+//                } else if (r < 0.60) {
+//                    randomCHO.mutate();
+//                    operationCounter[2]++;
+//                } else if (r < 0.8) {
+//                    randomCO.mutate();
+//                    operationCounter[3]++;
+//                } else {
+//                    randomCBMO.mutate();
+//                    operationCounter[4]++;
+//                }
+                store.chooseOperator().mutate();
+                operationCounter[store.getChoosen()]++;
+                if (randomP.getFittest() == OPTIMUM){
                     resultsRandom[pop] = steps;
                     break;
                 }
@@ -120,16 +136,19 @@ public class MaxBlockStatesGen implements Callable<String> {
         Population p = new Population(habitat[0]);
         CAMO amo = new CAMO(p, rng);
         CMO mo = new CMO(p, rng);
+        CBMO cbmo = new CBMO(p, rng);
         CCO co = new CCO(p, rng);
         CHO cho = new CHO(p, rng);
 
+        double[] oCounter = new double[OPERATIONS_NUMBER];
         Store[] states = new Store[powerOfTwo];
         for (int i = 0; i < states.length; ++i){
             states[i] = new Store(rng);
             states[i].addOperator(amo);
             states[i].addOperator(mo);
-            states[i].addOperator(co);
-            states[i].addOperator(cho);
+//            states[i].addOperator(cho);
+//            states[i].addOperator(co);
+            states[i].addOperator(cbmo);
             states[i].initProbabilities();
             states[i].setBetha(betha);
         }
@@ -148,8 +167,12 @@ public class MaxBlockStatesGen implements Callable<String> {
             int state = getStatePop(p);
             for (int iterations = 0; iterations < MAX_STEPS / ONE_STEP; ++iterations) {
                 for (int steps = 0; steps < ONE_STEP; ++steps){
-//                    states[state].chooseOperator().mutate();
-                    states[state].greedyChoose().mutate();
+                    if (!greedy){
+                        states[state].chooseOperator().mutate();
+                    } else {
+                        states[state].greedyChoose().mutate();
+                    }
+                    oCounter[states[state].getChoosen()]++;
                     double reward = states[state].getOperators().get(states[state].getChoosen()).getReward();
                     double q = states[state].getQ(states[state].getChoosen());
                     q = q + alpha * (reward + gamma * states[state].getMaxQ() - q);
@@ -191,15 +214,49 @@ public class MaxBlockStatesGen implements Callable<String> {
         dev /= (maxIndex - minIndex);
         devRandom /= (maxIndex - minIndex);
 
-        if (exp < expRandom * 0.9){
-            System.out.println(alpha + " " + gamma + " " + betha + " " + ONE_STEP + " " + exp + " " + expRandom +
-                        " " + Math.sqrt(dev) + " " + Math.sqrt(devRandom));
-            return alpha + " " + gamma + " " + betha + " " + ONE_STEP + " " + exp +
-                    " " + expRandom + " " + Math.sqrt(dev) + " " + Math.sqrt(devRandom);
-        } else {
-            System.out.println("fail");
-            return "fail";
+        double overall = 0;
+        double overallR = 0;
+//        for (int i = 0; i < OPERATIONS_NUMBER; ++i){
+//            overall += oCounter[i];
+//            overallR += operationCounter[i];
+//        }
+//        for (int i = 0; i < OPERATIONS_NUMBER; ++i){
+//            System.out.println("method " + oCounter[i] / overall * 100);
+//            System.out.println("random " + operationCounter[i] / overallR * 100);
+//        }
+
+//        double good = 0;
+//        for (int i = 0; i < GLOBAL_STEPS; ++i){
+//            if (results[i] != MAX_STEPS){
+//                ++good;
+//            }
+//        }
+//
+//        System.out.println(good);
+//        System.out.println(exp);
+//        System.out.println(Math.sqrt(dev));
+
+        double tempO = 0;
+        System.out.println(results[50] + " " + exp);
+        for (int i = minIndex; i <= maxIndex; ++i){
+            if (results[i] <= exp + 3 * Math.sqrt(dev) && results[i] >= exp - 3 * Math.sqrt(dev)){
+                ++tempO;
+            }
         }
+        System.out.println(tempO / (maxIndex - minIndex));
+        return "atata";
+
+
+//        if (exp < expRandom * 0.9){
+//            System.out.println(alpha + " " + gamma + " " + betha + " " + ONE_STEP + " " + exp + " " + expRandom +
+//                        " " + Math.sqrt(dev) + " " + Math.sqrt(devRandom));
+//            return alpha + " " + gamma + " " + betha + " " + ONE_STEP + " " + exp +
+//                    " " + expRandom + " " + Math.sqrt(dev) + " " + Math.sqrt(devRandom);
+//        } else {
+//            System.out.println("fail");
+//            return "fail";
+//        }
+
 
 //        System.out.println("Mediana " + results[GLOBAL_STEPS / 2] + " " + resultsRandom[GLOBAL_STEPS / 2]);
 //

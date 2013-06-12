@@ -53,4 +53,17 @@ public class TspIndividual {
         return path.length;
     }
 
+    public boolean check(){
+        boolean[] presented = new boolean[this.size()];
+        Arrays.fill(presented, false);
+        for (int i = 0; i < size(); ++i){
+            if (presented[path[i]]){
+                return false;
+            } else {
+                presented[path[i]] = true;
+            }
+        }
+        return true;
+    }
+
 }
