@@ -27,7 +27,7 @@ public class GraphGenerator {
             writer.flush();
             writer.close();
         } catch (FileNotFoundException e) {
-            System.err.println("An error ocured while writing data " + e.toString());
+            System.err.println("An error occurred while writing data " + e.toString());
         }
     }
 
